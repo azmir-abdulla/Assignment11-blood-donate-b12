@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import "daisyui/daisyui.css";
+
+
+
+
+.nav-link {
+  position: relative;
+  font-weight: 600;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 35px;
+  width: 95%;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  box-shadow: rgba(71, 51, 127, 0.11) 0px 5px 12.09px 0.91px;
+  top: 4px;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.3s ease-out;
+  margin: 0 auto;
+  background: rgb(240, 67, 54);
+  border-radius: 10px 10px 20px 20px;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  opacity: 1;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: white !important;
+}
+
+/* Remove all DaisyUI default hover/active styles */
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
