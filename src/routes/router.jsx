@@ -10,6 +10,8 @@ import Error from '../pages/Error';
 import PrivateRoute from '../providers/PrivateRoute';
 import DonationRequest from '../pages/DonationRequest';
 import Funding from '../pages/Funding';
+import { Search } from 'lucide-react';
+import Searchblood from '../pages/Searchblood';
 
 const router = createBrowserRouter([
   {
@@ -61,11 +63,18 @@ const router = createBrowserRouter([
       </PrivateRoute>
     ),
   },
+  {
+    path:"/search-blood",
+    element: (
+      <Searchblood></Searchblood>
+    )
+  },
 
   {
     path: "*",
     element: <Error></Error>,
   },
+ 
 ]);
         
 export default router;
