@@ -17,7 +17,6 @@ const Counter = ({ value }) => {
   useEffect(() => {
     const animation = animate(count, value, { duration: 2.5, ease: 'easeOut' });
     
-    // Framer motion's onChange listener
     const unsubscribe = rounded.on('change', (latest) => {
       setDisplayValue(latest);
     });

@@ -82,27 +82,31 @@ const Navbar = () => {
           </button>
 
           {user ? (
-            <>
-              <div className="relative group">
-                <Link to="/auth/UserProfile">
+            <div className="dropdown dropdown-end">
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 h-10 rounded-full border-2 border-[#6BCB77]">
                   <img
                     src={user.photoURL || "https://i.ibb.co/5nDfxpQ/user.png"}
                     alt="User"
-                    className="w-10 h-10 rounded-full border-2 border-[#6BCB77] cursor-pointer"
                   />
-                </Link>
-                <span className="absolute left-1/2 -translate-x-1/2 mt-2 bg-gray-800 text-white text-sm px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                  {user.displayName || "User"}
-                </span>
+                </div>
               </div>
-
-              <button
-                onClick={handleLogout}
-                className="btn bg-[#cb6b6b] hover:bg-[#FF8C42] text-white btn-sm"
-              >
-                Logout
-              </button>
-            </>
+              <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                <li className="px-3 py-2 text-sm font-bold text-center border-b mb-2 truncate text-gray-700 pointer-events-none">
+                  {user.displayName || "User"}
+                </li>
+                <li>
+                  <Link to="/dashboard" className="font-medium text-[#222]">
+                    Dashboard
+                  </Link>
+                </li>
+                <li>
+                  <button onClick={handleLogout} className="text-red-500 font-semibold hover:bg-red-50">
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            </div>
           ) : (
             <>
               <Link
