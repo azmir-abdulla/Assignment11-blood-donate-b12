@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router';
 import Navbar from '../components/Navbar';
 import Herosection from "../components/Herosection";
+import Counting from '../components/Counting';
 
 
 
@@ -13,6 +14,9 @@ const HomeLayout = () => {
         </header>
 
         <Herosection></Herosection>
+        <Counting></Counting>
+        {/* If there's an Outlet intended for HomeLayout, it should go here. But assuming it's just the landing page for now */}
+        <Outlet />
       </>
     );
 };

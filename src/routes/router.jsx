@@ -12,6 +12,7 @@ import DonationRequest from '../pages/DonationRequest';
 import Funding from '../pages/Funding';
 import { Search } from 'lucide-react';
 import Searchblood from '../pages/Searchblood';
+import DashboardLayout from '../layouts/DashboardLayout';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,14 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
     ],
+  },
+  {
+    path:"/dashboard",
+    element: (
+      <PrivateRoute>
+        <DashboardLayout></DashboardLayout>
+      </PrivateRoute>
+    )
   },
   {
     path: "/auth",

@@ -62,10 +62,10 @@ const Herosection = () => {
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
               <a
-                href="#donate"
+                href="/auth/register"
                 className="rounded-full bg-red-600 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-red-600/30 hover:bg-red-500 hover:shadow-red-500/40 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 transition-all flex items-center gap-2"
               >
-                Donate Now
+                Join as a donor
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
@@ -73,7 +73,7 @@ const Herosection = () => {
                 className="text-sm font-semibold leading-6 text-slate-900 flex items-center gap-2 hover:text-red-600 transition-colors group"
               >
                 <CalendarHeart className="w-5 h-5 text-slate-400 group-hover:text-red-600 transition-colors" />
-                Find a drive near you
+                Search Donors
               </a>
             </div>
           </motion.div>
